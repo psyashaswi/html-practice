@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Addition and Subtraction</title>
+</head>
+<body>
+    <h2>Addition and Subtraction of a and b</h2>
+    
+    
+    <label for="a">Enter value for a:</label>
+    <input type="number" id="a" required>
+    <br>
+    <label for="b">Enter value for b:</label>
+    <input type="number" id="b" required>
+    <br>
+    
+    
+    <button onclick="addition()">Addition</button>
+    
+    <h3>Results</h3>
+
+    <table border="1">
+        <tr>
+            <th>Expression</th>
+            <th>Answer</th>
+        </tr>
+        <tr>
+            <td id="addExp"></td>
+            <td id="addResult"></td>
+        </tr>
+        <tr>
+            <td id="subExp"></td>
+            <td id="subResult"></td>
+        </tr>
+    </table>
+
+    <script>
+        function calculate() {
+           
+            var a = parseInt(document.getElementById('a').value);
+            var b = parseInt(document.getElementById('b').value);
+            
+            
+            var addition = a + b;
+            var subtraction = a - b;
+            
+            
+            document.getElementById('addExp').innerText = a + " + " + b;
+            document.getElementById('addResult').innerText = addition;
+            
+            document.getElementById('subExp').innerText = a + " - " + b;
+            document.getElementById('subResult').innerText = subtraction;
+        }
+
+        alert(addition)
+    </script>
+</body>
+</html>
