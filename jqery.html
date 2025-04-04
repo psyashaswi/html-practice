@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function hello() {
+                alert('hello!!');
+            }
+
+            function loadImage(actor) {
+                let imageUrl = '';
+
+                if (actor === 'chiranjeevi') {
+                    imageUrl = 'https://th-i.thgim.com/public/incoming/f6w1rt/article66161716.ece/alternates/LANDSCAPE_1200/DSC_2495.JPG';
+                } else if (actor === 'balayya') {
+                    imageUrl = 'https://theleaderspage.com/wp-content/uploads/2020/03/11695966_987625907956275_4016788287828202708_n.jpg';
+                } else if (actor === 'allu arjun') {
+                    imageUrl = 'https://th-i.thgim.com/public/incoming/iivp5i/article69376891.ece/alternates/LANDSCAPE_1200/IMG_Allu_Arjun_2_1_68DQBPQQ.jpg';
+                }
+
+                $('#myImage').attr('src', imageUrl);
+            }
+
+            
+            $('#chiranjeeviBtn').click(function() { loadImage('chiranjeevi'); });
+            $('#balayyaBtn').click(function() { loadImage('balayya'); });
+            $('#alluArjunBtn').click(function() { loadImage('allu arjun'); });
+            $('#helloBtn').click(hello);
+        });
+    </script>
+</head>
+<body>
+
+    <button id="chiranjeeviBtn">chiranjeevi</button>
+    <button id="balayyaBtn">balayya</button>
+    <button id="alluArjunBtn">allu arjun</button>
+
+    <img id="myImage" src="https://th-i.thgim.com/public/incoming/iivp5i/article69376891.ece/alternates/LANDSCAPE_1200/IMG_Allu_Arjun_2_1_68DQBPQQ.jpg" width="300">
+
+    <button id="helloBtn">hello!!!!</button>
+
+</body>
+</html>
